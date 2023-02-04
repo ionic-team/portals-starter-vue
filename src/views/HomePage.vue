@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       initialContext,
+      publicPath: process.env.BASE_URL,
     };
   },
 };
@@ -36,8 +37,8 @@ export default {
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
       </ion-header>
-      <div className="container">
-        <img className="logo" src="/assets/logo.svg" />
+      <div class="container">
+        <img class="logo" :src="`${publicPath}logo.svg`" />
         <h3>Welcome to Portals</h3>
         <p>
           This is a web application that has the Portals plugin preinstalled. If
@@ -45,7 +46,7 @@ export default {
           application from the Native application you can find reference
           material below.
         </p>
-        <ol className="info-list">
+        <ol class="info-list">
           <li>
             <p>Passing Data to a Portal with Initial Context</p>
             <a
